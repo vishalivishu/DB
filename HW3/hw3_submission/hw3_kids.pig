@@ -1,0 +1,11 @@
+X = load 'kids.txt' USING PigStorage(' ') AS (name:chararray, age:chararray);
+Y = load 'purchases.txt' USING PigStorage(' ') AS (name:chararray, flavor:chararray);
+Z = JOIN X by name, Y by name;
+P = FILTER Z by age MATCHES '.*(10|11|12).*';
+Q = GROUP P by flavor;
+R = FOREACH Q generate group,COUNT_STAR(P) as cnt;
+S = GROUP R all;
+T = FOREACH S GENERATE MAX($1.cnt) as maxval;
+U = FILTER R by (chararray)cnt MATCHES (chararray)T.maxval;
+V = FOREACH U GENERATE $0;
+STORE V into 'output_flavor';

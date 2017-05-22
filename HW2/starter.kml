@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+<Style id="z1">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href></Icon></IconStyle>
+</Style>
+<Placemark><name>my home</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.289009,34.027599</coordinates></Point>
+</Placemark>
+<Placemark><name>vermont gate</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.291412,34.019970</coordinates></Point>
+</Placemark>
+<Placemark><name>SAL</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.290001,34.019736</coordinates></Point>
+</Placemark>
+<Placemark><name>RTCC</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.285768,34.020468</coordinates></Point>
+</Placemark>
+<Placemark><name>gate 1</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.283520,34.018537</coordinates></Point>
+</Placemark>
+<Placemark><name>gate 2</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.286311,34.018731</coordinates></Point>
+</Placemark>
+<Placemark><name>leavey gate</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.280702,34.021166</coordinates></Point>
+</Placemark>
+<Placemark><name>ostrow school</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.285470,34.023480</coordinates></Point>
+</Placemark>
+<Placemark><name>SGM</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.288759,34.021769</coordinates></Point>
+</Placemark>
+<Style id="polygon">
+<LineStyle>
+<width>1.5</width>
+ 	</LineStyle>
+ 	<PolyStyle>
+     <color>505078F0</color>
+</PolyStyle>
+</Style>
+<Placemark>
+<name>polygonObj</name>
+<styleUrl>#polygon</styleUrl>
+<Polygon>
+            <extrude>1</extrude>
+            <altitudeMode>relativeToGround</altitudeMode>
+            <outerBoundaryIs>
+              <LinearRing>
+                <coordinates> 
+				-118.28352,34.018537,100
+				-118.286311,34.018731,100
+				-118.291412,34.01997,100
+				-118.289009,34.027599,100
+				-118.280702,34.021166,100
+				-118.28352,34.018537,100
+                </coordinates>
+              </LinearRing>
+            </outerBoundaryIs>
+          </Polygon>
+</Placemark>
+<Style id="neighbor">
+<LineStyle>
+<width>2.5</width>
+ 	</LineStyle>
+</Style>
+<Placemark>
+<styleUrl>#neighbor</styleUrl>
+      <LineString>
+        <extrude>1</extrude>
+        <coordinates>
+		-118.289009,34.027599 -118.285470,34.023480
+		-118.289009,34.027599 -118.288759,34.021769
+		-118.289009,34.027599 -118.285768,34.020468
+		</coordinates>
+      </LineString>
+    </Placemark>
+</Document>
+</kml>
